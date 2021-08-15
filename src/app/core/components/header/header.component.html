@@ -1,0 +1,35 @@
+<p-menubar [model]="navBarItems" styleClass="prime-header-menubar">
+  <ng-template pTemplate="start">
+    <div>
+      <p-dropdown
+        [options]="companies"
+        [(ngModel)]="selectedCompany"
+        optionLabel="name"
+        styleClass="prime-drop-down"
+      ></p-dropdown>
+      <span
+        >Powered by
+        <img
+          class="brand-logo"
+          src="https://tgl.co/assets/img/logo1.png"
+          alt="Think Global Logistics"
+      />TGL
+    </span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div>
+      <i class="pi pi-plus p-mr-4 p-text-secondary" style="font-size: 2rem" (click)="addItemMenu.toggle($event)"></i>
+      <p-menu #addItemMenu [popup]="true" [model]="addItems"></p-menu>
+      <i
+        class="pi pi-bell p-mr-4 p-text-secondary"
+        pBadge
+        style="font-size: 2rem"
+        severity="danger"
+        value="2"
+      ></i>
+      <p-avatar label="P" size="large" shape="circle" (click)="avatarMenu.toggle($event)"></p-avatar>
+      <p-menu #avatarMenu [popup]="true" [model]="avatarItems"></p-menu>
+    </div>
+  </ng-template>
+</p-menubar>

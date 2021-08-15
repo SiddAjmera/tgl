@@ -1,0 +1,24 @@
+.custom-skeleton {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    p-skeleton {
+      margin: 10px 5px 10px 0;
+    }
+  }
+
+  p-skeleton {
+    margin: 5px 0;
+  }
+}

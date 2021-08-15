@@ -1,0 +1,43 @@
+<div class="card-wrapper">
+  <div class="job-card" routerLink="/my-jobs/{{ job.id }}">
+    <img
+      class="job-card-img"
+      [src]="job.type | jobTypeLogo"
+      [alt]="job.type"
+    />
+    <div class="job-details">
+      <div class="job-details-header">
+        <h1 
+          class="job-details-header-title"
+          [ngClass]="hasJobDepartureDatePassed ? 'orange' : 'blue'">
+          {{ job.id }}
+        </h1>
+        <h2 class="job-details-header-sub-title">
+          {{ job.source }} to {{ job.destination }}
+        </h2>
+      </div>
+      <table>
+        <thead>
+          <th>Cust Ref.</th>
+          <th>Containers</th>
+          <th>Supplier</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let log of job.logs">
+            <td>{{ log.customerReference }}</td>
+            <td>{{ log.containers }}</td>
+            <td>{{ log.supplier }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p-timeline [value]="job.timeline" layout="horizontal" styleClass="prime-time-line">
+      <ng-template pTemplate="content" let-event>
+          <p>{{ event.status }}</p>
+          <p>{{ event.date | date }}</p>
+      </ng-template>
+  </p-timeline>
+  <button pButton pRipple type="button" icon="pi pi-chevron-right" class="p-button-rounded p-button-text p-button-plain"></button>
+  </div>
+</div>
+

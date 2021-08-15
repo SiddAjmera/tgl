@@ -1,0 +1,35 @@
+
+.my-jobs{
+    margin-top: 25px;
+    padding: 0 25px;
+    .page-title{
+        font-size: 24px;
+        line-height: 24px;
+        font-family: 'Roboto';
+        color: #0B1F41;
+    }
+    :host{
+        ::ng-deep .prime-tab-menu{
+            margin: 0;
+            .p-tabmenu-nav{
+                .p-tabmenuitem{
+                    p-menuitem-link {
+                        .p-menuitem-text {
+                            font-size: 16px;
+                            line-height: 24px;
+                            
+                            color: #97999B;
+                        }
+                        &.p-menuitem-link-active{
+                            border-bottom: 3px solid #0B1F41;
+                            .p-menuitem-text {
+                                color: #0B1F41;;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

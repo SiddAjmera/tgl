@@ -1,0 +1,7 @@
+<!-- <app-job-list-item-skeleton [listLength]="1"></app-job-list-item-skeleton> -->
+<ng-container *ngIf="jobs$ | async as jobs; else loading">
+  <app-job-list [jobs]="jobs"></app-job-list>
+</ng-container>
+<ng-template #loading>
+    <app-job-list-item-skeleton [listLength]="5"></app-job-list-item-skeleton>
+</ng-template>

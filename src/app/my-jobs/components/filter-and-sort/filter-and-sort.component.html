@@ -1,0 +1,60 @@
+<div class="filters">
+  <label class="filter-sort-label">Filter by:</label>
+  <p-dropdown
+    styleClass="prime-dropdown"
+    [options]="jobTypes"
+    [(ngModel)]="selectedJobType"
+    (onChange)="handleFilterByType()"
+    placeholder="Type"
+    optionLabel="label"
+    [showClear]="false"
+  ></p-dropdown>
+  <p-dropdown
+    *ngIf="locations$ | async as locations"
+    styleClass="prime-dropdown"
+    [options]="locations"
+    [(ngModel)]="selectedLocation"
+    (onChange)="handleFilterByLocation()"
+    placeholder="Location"
+    optionLabel="label"
+    [showClear]="false"
+  ></p-dropdown>
+  <p-dropdown
+    styleClass="prime-dropdown"
+    [options]="departureDateOptions"
+    [(ngModel)]="selectedDepartureDate"
+    (onChange)="handleFilterByDepartureDate()"
+    placeholder="Departure Date"
+    optionLabel="label"
+    [showClear]="false"
+  ></p-dropdown>
+  <p-dropdown
+    styleClass="prime-dropdown"
+    [options]="arrivalDateOptions"
+    [(ngModel)]="selectedArrivalDate"
+    (onChange)="handleFilterByArrivalDate()"
+    placeholder="Arrival Date"
+    optionLabel="label"
+    [showClear]="false"
+  ></p-dropdown>
+</div>
+<div class="sort-options">
+  <label class="filter-sort-label">Sort by:</label>
+  <p-dropdown
+  styleClass="prime-dropdown"
+  [options]="sortByOptions"
+  [(ngModel)]="selectedSortByOption"
+  (onChange)="handleSortOptionChange()"
+  placeholder="Sort by"
+  optionLabel="label"
+  [showClear]="false"
+></p-dropdown>
+  <p-autoComplete
+    [(ngModel)]="selectedSearchSuggestion"
+    [suggestions]="filteredSuggestions"
+    (completeMethod)="filterCountry($event)"
+    (onSelect)="handleFilter()"
+    (onClear)="handleFilter()"
+    [minLength]="1"
+  ></p-autoComplete>
+</div>

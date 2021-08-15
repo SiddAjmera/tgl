@@ -1,0 +1,126 @@
+:host {
+    ::ng-deep .prime-header-menubar {
+        padding: 21px 25px 12px 25px;
+        background-color: #0B0C40;
+        border:none;
+        color:white;
+        width: 100%;
+        justify-content:  space-between;
+        border-radius: 0;
+        .p-menubar-start {
+            >div{
+                display: flex;
+                flex-direction: column;
+            }
+            .brand-logo{
+                height: 10px;
+            }
+        }
+        .p-menubar-button{
+            color: #FFFFFF;
+        }
+        .prime-drop-down{
+            background-color: #0B0C40;
+            border: none;
+
+            .p-inputtext{
+                color: #FFFFFF;
+                padding-left: 0;
+            }
+            .p-dropdown-trigger{
+                border: none;
+                color: #0B0C40;
+            }
+        }
+        .p-menubar-root-list{
+            .p-menuitem {
+                .p-menuitem-link{
+                    .p-menuitem-text{
+                        font-size: 18px;
+                        color: #F2F0EB;
+                        font-weight: bold;
+                    } 
+                    &:hover, 
+                    &:active,
+                    &:focus {
+                        .p-menuitem-text{
+                            color: #FF3200;
+                        } 
+                    }
+                }
+            }
+        }
+        .p-menubar-end{
+            margin-left: 0;
+            >div{
+                display: flex;
+                align-items: center;
+                width: 300px;
+                justify-content: space-around;
+            }
+            .pi {
+                color: #FFFFFF;
+                width: 45px;
+                height: 45px;
+
+                &.pi-plus{
+                    font-size: 18px !important;
+                    border: 1px solid #ffffff;
+                    border-radius: 5px;
+                    text-align: center;
+                    padding: 12px;
+                    line-height: 17px;
+                }
+                &.pi-bell{
+                    transform: rotate(30deg);
+                    top: 10px;
+                     .p-badge {
+                        top: -20px;
+                        right: 15px;
+                        transform: rotate(-30deg);
+                    }
+                }
+            }
+            .p-avatar{
+                background-color: #FFFFFF;
+                .p-avatar-text{
+                    color: #0B0C40;
+                }
+            }
+            .ng-trigger{
+                .p-menu-list{
+                    .p-menuitem{
+                        .p-menuitem-link {
+                            .p-menuitem-text{
+                                color: #0B0C40;
+                            }
+                            .p-menuitem-icon{
+                                color: #0B0C40;
+                                height: auto;
+                            }
+                            &:focus,
+                            &:active{
+                                .p-menuitem-text{
+                                    color: #0B0C40;
+                                }
+                                .p-menuitem-icon{
+                                    color: #0B0C40;
+                                    height: auto;
+                                }
+                            }
+                            &:hover{
+                                background: #0B0C40;
+                                .p-menuitem-text{
+                                    color: #FFFFFF;
+                                }
+                                .p-menuitem-icon{
+                                    color: #FFFFFF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

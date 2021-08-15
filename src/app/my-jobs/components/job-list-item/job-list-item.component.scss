@@ -1,0 +1,123 @@
+.card-wrapper{
+  background: #F8F8F8;
+  padding: 0 10px;
+
+  .job-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid #97999B;
+
+    .job-card-img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .job-details{
+      width: calc(100% - 65%);
+      .job-details-header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px dotted #97999B;
+
+        .job-details-header-title{
+          color: #FFFFFF;
+          font-size: 20px;
+          line-height: 24px;
+          font-family: "Roboto";
+          font-weight: 500;
+          padding: 7px 3px;
+          margin-right: 25px;
+          &.blue{
+            background-color: #0B0C40;
+          }
+          &.orange{
+            background-color: #FF3200;
+          }
+        }
+        .job-details-header-sub-title{
+          color: #0B0C40;
+          font-size: 20px;
+          line-height: 24px;
+          font-family: "Roboto";
+        }
+      }
+      table{
+        margin-top: 10px;
+        width: 100%;
+        thead{
+          th{
+            text-align: left;
+            font-size: 12px;
+            line-height: 24px;
+            font-family: "Roboto";
+            color: #0B0C40;
+          }
+        }
+        tbody{
+          tr{
+            td{
+              font-size: 14px;
+              line-height: normal;
+              font-family: "Roboto";
+              color: #0B0C40;
+            }
+          }
+        }
+      }
+    }
+
+    p-timeline {
+      width: 650px;
+    }
+  }
+}
+:host{
+  ::ng-deep .prime-time-line{
+    &.p-timeline{
+      .p-timeline-event {
+        .p-timeline-event-separator{
+          min-width: 120px;
+          .p-timeline-event-marker{
+            border: 1px solid #04E2F6;
+            width: 30px;
+            height: 30px;
+          }
+          .p-timeline-event-connector{
+            border: 1px solid #04E2F6;
+            margin: 0 0.25rem;
+            width: 70%;
+          }
+        }
+        .p-timeline-event-content{
+          p{
+            font-size: 14px;
+            line-height: 24px;
+            color: #0B0C40;
+          }
+        }
+      }
+      .p-timeline-event:first-child:nth-last-child(2),
+      .p-timeline-event:first-child:nth-last-child(2) ~ .p-timeline-event {
+          .p-timeline-event-separator{
+            .p-timeline-event-marker{
+              background-color: #bdbdbd;
+            }
+          }
+      }
+      .p-timeline-event:first-child:nth-last-child(4),
+      .p-timeline-event:first-child:nth-last-child(4) ~ .p-timeline-event {
+          .p-timeline-event-separator{
+            .p-timeline-event-marker{
+              background-color: #FCFFFF;
+            }
+          }
+      }
+    }
+    &.p-timeline-horizontal {
+        align-items: flex-start;
+    }
+  }
+}
+
